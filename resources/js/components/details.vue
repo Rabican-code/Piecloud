@@ -118,7 +118,6 @@
   .button {
     display: inline-block;
     padding: 10px 30px;
-    background-color: #ccc;
     cursor: pointer;
     border-radius: 8%;
   }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class=" bg-white py-8 pl-20">
-        <div>
+        <div class="ml-[80px]">
         <h2 class="text-4xl font-bold">PieCloud</h2>
         <p>Status: 100% [All operation]</p>
     </div>

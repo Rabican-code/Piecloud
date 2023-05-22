@@ -1,5 +1,7 @@
 <template>
+
   <div>
+
     <div class=" bg-white py-8 pl-20">
         <div class="ml-[80px]">
         <h2 class="text-4xl">PieCloud</h2>
@@ -57,7 +59,7 @@
                 </g>
               </svg>
             </div>
-            <img class="mt-8 mx-5" src="./images/graph.png" />
+            <canvas id="myChart"></canvas>
           </div>
           <div class="data">
 
@@ -93,7 +95,9 @@
                 </g>
               </svg>
             </div>
-            <img class="mt-8 mx-5" src="./images/graph.png" />
+
+            <canvas id="myChart2"></canvas>
+
           </div>
         </div></div>
         <div v-if="activeButton === 'tasks'" class="text-2xl">Tasks go here</div>
@@ -105,20 +109,71 @@
 </template>
 
   <script>
+import Chart from 'chart.js/auto';
 
-  export default {
+export default {
+
+    mounted() {
+        // Your component mounted hook code here
+        // This is where you can initialize the chart
+        var ctx = document.getElementById('myChart').getContext("2d");
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: this.chartData.map(item => item[0]),
+                datasets: [{
+                    label: 'Example',
+                    data: this.chartData.map(item => item[1]),
+                    backgroundColor: ['#2ecc71', '#e74c3c', '#8e44ad', '#d35400', '#16a085']
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 22,
+                    text: 'Example'
+                }
+            }
+        });
+        var ctx = document.getElementById('myChart2').getContext("2d");
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: this.chartData.map(item => item[0]),
+                datasets: [{
+                    label: 'Example',
+                    data: this.chartData.map(item => item[1]),
+                    backgroundColor: ['#2ecc71', '#e74c3c', '#8e44ad', '#d35400', '#16a085']
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 22,
+                    text: 'Example'
+                }
+            }
+        });
+    },
     data() {
-      return {
-        activeButton: 'stats',
-
-      };
+        return {
+            activeButton: 'stats',
+            chartData: [
+                ['2014', 100],
+                ['2015', 200],
+                ['2016', 300],
+                ['2017', 400],
+                ['2018', 500]
+            ]
+        };
     },
     methods: {
-      toggleButton(button) {
-        this.activeButton = button;
-      },
+        toggleButton(button) {
+            this.activeButton = button;
+        },
     },
-  };
+};
+
 
   </script>
 

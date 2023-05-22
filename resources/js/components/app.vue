@@ -1,9 +1,7 @@
 <template>
   <div class="flex justify-center">
-
-
     <div class="grid mt-7 mx-8 grid-cols-2 gap-6 w-[1050px]">
-      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden  sm:rounded-lg">
+      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden sm:rounded-lg">
         <div class="mt-2 flex justify-end">
           <a href="/details">
             <svg
@@ -47,8 +45,7 @@
         </div>
       </div>
 
-
-      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden  sm:rounded-lg">
+      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden sm:rounded-lg">
         <div class="mt-2 flex justify-end">
           <a href="/details">
             <svg
@@ -92,7 +89,7 @@
         </div>
       </div>
 
-      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden  sm:rounded-lg">
+      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden sm:rounded-lg">
         <div class="mt-2 flex justify-end">
           <a href="/details">
             <svg
@@ -136,7 +133,7 @@
         </div>
       </div>
 
-      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden  sm:rounded-lg">
+      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden sm:rounded-lg">
         <div class="mt-2 flex justify-end">
           <a href="/details">
             <svg
@@ -180,7 +177,7 @@
         </div>
       </div>
 
-      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden  sm:rounded-lg">
+      <div class="mx-6 h-[320px] w-[500px] bg-white overflow-hidden sm:rounded-lg">
         <div class="mt-2 flex justify-end">
           <a href="/details">
             <svg
